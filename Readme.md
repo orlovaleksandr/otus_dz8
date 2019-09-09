@@ -184,14 +184,6 @@ OPTIONS=-f conf/second.conf
 ```PidFile /var/run/httpd-second.pid``` - т.е. должен быть указан файл пида
 ```Listen 8080``` - указан порт, который будет отличаться от другого инстанса
 ```
-[root@lvm system]# systemctl status httpd@second.service
-● httpd@second.service - The Apache HTTP Server
-   Loaded: loaded (/etc/systemd/system/httpd@.service; disabled; vendor preset: disabled)
-   Active: inactive (dead)
-     Docs: man:httpd(8)
-           man:apachectl(8)
-[root@lvm system]# systemctl start httpd@second.service
-[root@lvm system]# systemctl start httpd@first.service
 [root@lvm system]# systemctl status httpd@first.service
 ● httpd@first.service - The Apache HTTP Server
    Loaded: loaded (/etc/systemd/system/httpd@.service; disabled; vendor preset: disabled)
